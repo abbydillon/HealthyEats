@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <img id = "logo" class ="center" src="logo3.png" alt="Healthy Eats Logo"  border = "0" width="400" height="100"/>
+    <link
+      rel = "stylesheet"
+      href = "styleindex.css">
+      <script src="myScript1.js"></script>
+  <style>
+  * {
+   margin: 0;
+   padding: 0;
+  }
+  .imgbox {
+   display: grid;
+   height: 100%;
+  }
+  .center-fit {
+   max-width: 900%;
+   max-height: 100vh;
+   margin: auto;
+  }
+  .left-fit {
+   max-width: 90%;
+   max-height: 100vh;
+   margin: right;
+  }
+  .right-fit {
+   max-width: 100%;
+   max-height: 100vh;
+   margin: right;
+  }
+  </style>
+  </head>
+  <body>
+<script>
+  var inputElement = document.getElementById('bleh');
+  var theirInput = '';
+  inputElement.addEventListener('change', function(e) {
+    theirInput = e.target.value;
+  });
+</script>
+<font color="black">
+    <ul>
+      <li><a href="indexEats.html">Home</a></li>
+      <li><a href="requests.html">Make Requests</a></li>
+      <li><a href="find_food.html">Find Some Food</a></li>
+      <li><a href="volunteer.html">Volunteer</a></li>
+    </ul>
+    <h2>Volunteer for Healthy Eats!</h2>
+
+<a href="https://docs.google.com/forms/d/e/1FAIpQLSem3f4zMLhVyr--h7f3-kih4lT91ejd62cnU2g6tFEqcIWbDQ/viewform?c=0&w=1">
+<img border="0" alt="Volunteer" src="button.png" width= "90" height= "30">
+</a>
+
+<p><center><font size="+1">Healthy Eats is looking for Volunteers throughout the Boston area to help out during our Produce drives.
+Please fill out the form below if you are interested and we will contact you as soon as there is a volunteer event near you.</font></center></p>
+
+<h2>Donate to Healthy Eats!</h2>
+<div>
+<a href="https://www.paypal.com/cgi-bin/webscr?cmd=_flow&SESSION=KbZ314ofCvLnpOdPWpRdAPuiivKZGWCzdD9TCAg3v9fsJ4iaVfvWVDo8Q4C&dispatch=5885d80a13c0db1f8e263663d3faee8db8175432b4df92754f4b4adb5a123d61&rapidsState=Donation__DonationFlow___StateDonationBilling&rapidsStateSignature=423a63276421c0566e04e7cb4fdffb53744938f2">
+<img border="0" alt="Donate" src="donate.png" width= "90" height= "30">
+</a>
+</div>
+<p><center><font size="+1">Healthy Eats is looking for donations to help support our business and out during our Produce drives.
+Please fill out the form below if you are interested in donating to Healthy Eats.</font></center></p>
+</font>
+ <div class="imgbox">
+<img class="center-fit" src="produce.jpg" width= "200" height= "200">
+<img class="left-fit" src="volunteerReal.jpg" width= "200" height= "200">
+<img class="right=fit" src="produce2.jpg" class="fit" width= "200" height= "200" vspace="50">
+
+<font color="black">
+<section class="content">
+  <form class="content__form contact-form">
+<!--    <div class="contact-form__input-group">
+      <input class="contact-form__input contact-form__input--radio" id="salutation-Student" name="salutation" type="radio" value="Student"/>
+      <label class="contact-form__label contact-form__label--radio" for="salutation-Student">Student</label>
+      <input class="contact-form__input contact-form__input--radio" id="salutation-Organization" name="salutation" type="radio" value="Organization"/>
+      <label class="contact-form__label contact-form__label--radio" for="salutation-Organization">Organization</label>
+      <input class="contact-form__input contact-form__input--radio" id="salutation-Business" name="salutation" type="radio" value="Business"/>
+      <label class="contact-form__label contact-form__label--radio" for="salutation-Business">Business</label>
+      <input class="contact-form__input contact-form__input--radio" id="salutation-Other" name="salutation" type="radio" value="Other"/>
+      <label class="contact-form__label contact-form__label--radio" for="salutation-Other">Other</label>
+-->
+    </div>
+    <div class="contact-form__input-group">
+      <h2>                </h2>
+      <p> Volunteer Form: </p>
+      <label class="contact-form__label" for="name">Full Name</label>
+      <input class="contact-form__input contact-form__input--text" id="name" name="name" type="text"/>
+    </div>
+    <div class="contact-form__input-group">
+      <label class="contact-form__label" for="email">Email Address</label>
+      <input class="contact-form__input contact-form__input--email" id="email" name="email" type="email"/>
+    <div class="contact-form__input-group">
+      <label class="contact-form__label" for="subject">Who are you??</label>
+      <select class="contact-form__input contact-form__input--select" id="subject" name="subject">
+        <option>Pick One.</option>
+        <option>Student.</option>
+        <option>Organization.</option>
+        <option>Business.</option>
+        <option>Other.</option>
+      </select>
+    </div>
+    <div class="contact-form__input-group">
+      <label class="contact-form__label" for="location">Location</label>
+      <select class="contact-form__input contact-form__input--location" id="location" name="location">
+        <option>Pick One.</option>
+        <option>Haymarket.</option>
+        <option>South End.</option>
+        <option>Roslindale.</option>
+      </select>
+    </div>
+    <div class="contact-form__input-group">
+      <label class="contact-form__label" for="message">Enter a Message (Optional):</label>
+      <textarea class="contact-form__input contact-form__input--textarea" id="message" name="message" rows="1.5" cols="60"></textarea>
+    </div>
+    <div class="contact-form__input-group">
+<!--  <p class="contact-form__label--checkbox-group">Please send me:</p>
+      <input class="contact-form__input contact-form__input--checkbox" id="snacks-pizza" name="snacks" type="checkbox" value="pizza"/>
+      <label class="contact-form__label contact-form__label--checkbox" for="snacks-pizza">Pizza</label>
+      <input class="contact-form__input contact-form__input--checkbox" id="snacks-cake" name="snacks" type="checkbox" value="cake"/>
+      <label class="contact-form__label contact-form__label--checkbox" for="snacks-cake">Cake</label>
+    </div>
+-->
+    <input name="secret" type="hidden" value="1b3a9374-1a8e-434e-90ab-21aa7b9b80e7"/>
+    <button class="contact-form__button" type="submit">Send It!</button>
+  </form>
+</section>
+<div class="results">
+  <h2 class="results__heading">Form Data</h2>
+  <pre class="results__display-wrapper"><code class="results__display"></code></pre>
+</div>
+</font>
+  </body>
+</html>
