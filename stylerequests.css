@@ -1,0 +1,49 @@
+body {font-family: trebuchet;
+    background-color: white;
+    font-size: 15px;
+    color: white;
+    background-image: url("white.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+}
+li a {
+    font-family: trebuchet;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #288362;
+}
+
+.active {
+    background-color: #1E5943;}
+
+#welcome{font-family: trebuchet;
+    font-size: 40px;
+    color: black;}
+#about{font-family: trebuchet;
+    font-size: 30px;
+    color: black;
+    text-align: center;}
+#des{margin: 200;
+    font-family: trebuchet;
+    font-size: 20px;
+    color: black;
+    text-align: center;}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    }
