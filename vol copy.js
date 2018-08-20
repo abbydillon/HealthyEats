@@ -10,15 +10,17 @@ var json = {
         {
             type: "text",
             name: "name",
-            title: "Your name:"
+            title: "Your name:",
+            isRequired: true
         }, {
             type: "text",
             name: "email",
-            title: "Your e-mail"
+            title: "Your e-mail",
+            isRequired: true
         }, {
             type: "checkbox",
             name: "location",
-            title: "What location would you volunteer for?",
+            title: "What location do you want to volunteer for?",
             isRequired: true,
             colCount: 4,
             choices: [
@@ -29,7 +31,7 @@ var json = {
         },{
             type: "checkbox",
             name: "person",
-            title: "Who are you?",
+            title: "I am a ...",
             isRequired: true,
             colCount: 4,
             choices: [
