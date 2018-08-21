@@ -1,66 +1,21 @@
-var surveyValueChanged = function (sender, options) {
-    var el = document.getElementById(options.name);
-    if (el) {
-        el.value = options.value;
-    }
-};
+<!DOCTYPE html>
+<html>
+    <head>
+<h1> Volunteer Form</h1>
+    </head>
+    <body>
 
-var json = {
-    questions: [
-        {
-            type: "text",
-            name: "name",
-            title: "Your name:",
-            isRequired: true
-        }, {
-            type: "text",
-            name: "email",
-            title: "Your e-mail",
-            isRequired: true
-        }, {
-            type: "checkbox",
-            name: "location",
-            title: "What location do you want to volunteer for?",
-            isRequired: true,
-            colCount: 4,
-            choices: [
-                "Haymarket",
-                "South End",
-                "Roslindale"
-            ]
-        },{
-            type: "checkbox",
-            name: "person",
-            title: "I am a ...",
-            isRequired: true,
-            colCount: 4,
-            choices: [
-                "Student",
-                "Organization",
-                "Business",
-                "Other"
-            ]
-        }
-    ]
-};
+      <title>Example of setting and getting results into/from the survey, jQuery Survey Library Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://unpkg.com/jquery"></script>
+      <script src="https://surveyjs.azureedge.net/1.0.38/survey.jquery.js"></script>
+      <link href="https://surveyjs.azureedge.net/1.0.38/survey.css" type="text/css" rel="stylesheet"/>
+      <link rel="stylesheet" href="./index.css">
 
-window.survey = new Survey.Model(json);
+        <div id="surveyElement"></div>
+        <div id="surveyResult"></div>
 
-survey
-    .onComplete
-    .add(function (result) {
-        document
-            .querySelector('#surveyResult')
-            .innerHTML = "result: " + JSON.stringify(result.data);
-    });
+        <script type="text/javascript" src="vol.js"></script>
 
-survey.data = {
-    name: '',
-    email: '',
-    location: ['']
-};
-
-$("#surveyElement").Survey({model: survey, onValueChanged: surveyValueChanged});
-
-
-var dict = {};
+    </body>
+</html>
