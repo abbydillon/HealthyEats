@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title></title>
+      <link href="formregister.css" rel="stylesheet" type="text/css"/>
+
+      <h2> Volunteer Form</h2>
+    </head>
+    <body>
+
+      <title>Example of setting and getting results into/from the survey, jQuery Survey Library Example</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src="https://unpkg.com/jquery"></script>
+      <script src="https://surveyjs.azureedge.net/1.0.38/survey.jquery.js"></script>
+      <link href="https://surveyjs.azureedge.net/1.0.38/survey.css" type="text/css" rel="stylesheet"/>
+      <link rel="stylesheet" href="./index.css">
+
+      <div id="surveyElement"></div>
+      <div id="surveyResult"></div>
+
+      <script type="text/javascript" src="vol.js"></script>
+
+      <?php
+      if (isset($_GET['submit'])) {
+      $con = mysql_connect("localhost", "root", "");
+      //Selecting Database
+      $db = mysql_select_db("test", $con);
+
+      $name = $_GET['name'];
+      $email = $_GET['email'];
+
+      if($name==""||$email=="")
+      {
+      echo"Please fill all the fields";
+      }
+      else{
+
+      $query=mysql_query("insert into login (name, email) values ('$name','$email')");
+      echo"Your data has been submitted successfully";
+
+      mysql_close($con); // Closing the connection
+      }
+
+      }
+      ?>
+    </body>
+</html>
