@@ -61,3 +61,6 @@ survey.data = {
 };
 
 $("#surveyElement").Survey({model: survey, onValueChanged: surveyValueChanged});
+
+
+var dict = {};
